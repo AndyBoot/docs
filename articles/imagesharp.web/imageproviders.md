@@ -108,14 +108,14 @@ Once installed the cache @SixLabors.ImageSharp.Web.Providers.AWS.AWSS3StorageIma
     // The "S3Buckets" collection allows registration of multiple buckets.
     options.S3Buckets.Add(new AWSS3BucketClientOptions
     {
-        options.Endpoint = {AWS_ENDPOINT};
-        options.BucketName = {AWS_BUCKET_NAME};
-        options.AccessKey = {AWS_ACCESS_KEY};
-        options.AccessSecret = {AWS_ACCESS_SECRET};
-        options.Region = {AWS_REGION};
+        Endpoint = {AWS_ENDPOINT},
+        BucketName = {AWS_BUCKET_NAME},
+        AccessKey = {AWS_ACCESS_KEY},
+        AccessSecret = {AWS_ACCESS_SECRET},
+        Region = {AWS_REGION},
     });
 })
-.AddProvider<AWSS3StorageImageProviderOptions>()
+.AddProvider<AWSS3StorageImageProvider>()
 ```
 
 Url requests are matched in accordance to the following rule:  
